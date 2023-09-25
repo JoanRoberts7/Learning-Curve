@@ -9,11 +9,11 @@ body {
 h1 {
     font-size: 36px;
     color: yellow; /* Initial color */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 p {
     font-size: 18px;
     color: blue; /* Initial color */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
-
-

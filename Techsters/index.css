@@ -1,0 +1,19 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: yellow; /* Initial color */
+}
+
+p {
+    font-size: 18px;
+    color: blue; /* Initial color */
+}
+
+

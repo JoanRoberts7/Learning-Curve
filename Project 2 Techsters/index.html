@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tasty Eateries</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="Tasty Eateries Logo">
+    </header>
+    <main>
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li>Beef Pilau - 350 Ksh</li>
+                <li>Mutton Pilau - 400 Ksh</li>
+                <li>Chicken Pilau - 430 Ksh</li>
+                <li>Nyama Choma - Beef (1 kg) - 950 Ksh</li>
+                <li>Nyama Choma - Pork (1 kg) - 800 Ksh</li>
+                <li>Nyama Choma - Mbuzi (1 kg) - 1100 Ksh</li>
+                <li>Side Dishes:</li>
+                <ul>
+                    <li>Ugali - 150 Ksh</li>
+                    <li>Mukimo - 180 Ksh</li>
+                    <li>Chips - 150 Ksh</li>
+                    <li>Kachumbari - 100 Ksh</li>
+                </ul>
+            </ul>
+        </div>
+        <form id="order-form">
+            <h2>Collect Orders</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="072200000" pattern="[0-9]{10}" required>
+            
+            <label for="meal1">Select Meal 1:</label>
+            <select id="meal1" name="meal1">
+                <option value="Beef Pilau">Beef Pilau</option>
+                <option value="Mutton Pilau">Mutton Pilau</option>
+                <option value="Chicken Pilau">Chicken Pilau</option>
+                <!-- Add more meal options here -->
+            </select>
+            
+            <label for="meal2">Select Meal 2:</label>
+            <select id="meal2" name="meal2">
+                <option value="">None</option>
+                <option value="Beef Pilau">Beef Pilau</option>
+                <option value="Mutton Pilau">Mutton Pilau</option>
+                <option value="Chicken Pilau">Chicken Pilau</option>
+                <!-- Add more meal options here -->
+            </select>
+            
+            <label for="meal3">Select Meal 3:</label>
+            <select id="meal3" name="meal3">
+                <option value="">None</option>
+                <option value="Beef Pilau">Beef Pilau</option>
+                <option value="Mutton Pilau">Mutton Pilau</option>
+                <option value="Chicken Pilau">Chicken Pilau</option>
+                <!-- Add more meal options here -->
+            </select>
+            
+            <label for="serving">Serving for:</label>
+            <input type="number" id="serving" name="serving" min="1" value="1" required>
+            
+            <label for="location">Delivery Location:</label>
+            <input type="text" id="location" name="location" placeholder="Thika Road Estate" required>
+            
+            <button type="submit">Place Order</button>
+        </form>
+    </main>
+    <footer>
+        <p>Payment is done on delivery through Mpesa.</p>
+        <p>Thank you for choosing to share a meal with us!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

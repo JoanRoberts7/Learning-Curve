@@ -2,62 +2,84 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: red;
-    color: white;
+    background-color: lightblue;
+    text-align: center;
     margin: 0;
-    padding: 0;
 }
 
 header {
-    text-align: center;
+    background-color: lightblue;
     padding: 20px;
 }
 
-header img {
-    display: block;
-    margin: 0 auto;
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
 
-main {
-    text-align: center;
-    padding: 20px;
+.menu-container {
+    background-color: yellow;
+    display: inline-block;
+    padding: 10px;
+    text-align: left;
 }
 
 .menu {
-    background-color: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu h2 {
+    font-size: 20px;
+}
+
+.menu ul {
+    padding-left: 20px;
 }
 
 form {
-    background-color: white;
+    background-color: #000;
+    color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-label, input, select, button {
-    display: block;
-    margin: 10px auto;
+form h2 {
+    font-size: 20px;
 }
 
 label {
-    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
 }
 
 button {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
+    background-color: yellow;
+    color: #000;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #ffd700;
+}
+
 footer {
     background-color: black;
-    text-align: center;
+    color: white;
     padding: 10px;
 }

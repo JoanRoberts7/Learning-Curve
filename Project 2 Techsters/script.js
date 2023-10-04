@@ -1,33 +1,39 @@
 // script.js
 
-// Event listener for form submission
-document.getElementById('order-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+const form = document.getElementById("order-form");
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const meal = document.getElementById("meal").value;
+    const quantity = document.getElementById("quantity").value;
+    const location = document.getElementById("location").value;
 
-    // Get form data
-    const formData = new FormData(event.target);
+    const orderData = {
+        name: name,
+        phone: phone,
+        meal: meal,
+        quantity: quantity,
+        location: location
+    };
 
-    // Convert form data to a plain object
-    const orderData = {};
-    formData.forEach((value, key) => {
-        orderData[key] = value;
-    });
-
-    // Send the order data to the mock API (replace this with your actual API)
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
+    // Send data to the mock API
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
         body: JSON.stringify(orderData),
         headers: {
-            'Content-Type': 'application/json',
-        },
+            "Content-type": "application/json; charset=UTF-8"
+        }
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Order placed successfully:', data);
-        alert('Order placed successfully!'); // You can customize this alert message
+        console.log(data);
+        alert("Order submitted successfully!");
+        form.reset();
     })
     .catch(error => {
-        console.error('Error placing order:', error);
-        alert('Error placing order. Please try again later.'); // You can customize this error message
+        console.error("Error:", error);
+        alert("There was an error submitting your order. Please try again later.");
     });
 });

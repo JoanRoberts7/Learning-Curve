@@ -8,19 +8,25 @@
 </head>
 <body>
     <header>
-        <img src="" alt="Tasty Eateries Logo">
+        <h1 id="logo">Tasty Eateries</h1>
     </header>
-    <main>
+    <div class="menu-container">
         <div class="menu">
             <h2>Menu</h2>
             <ul>
-                <li>Beef Pilau - 350 Ksh</li>
-                <li>Mutton Pilau - 400 Ksh</li>
-                <li>Chicken Pilau - 430 Ksh</li>
-                <li>Nyama Choma - Beef (1 kg) - 950 Ksh</li>
-                <li>Nyama Choma - Pork (1 kg) - 800 Ksh</li>
-                <li>Nyama Choma - Mbuzi (1 kg) - 1100 Ksh</li>
-                <li>Side Dishes:</li>
+                <li>Kenyan Delicacies</li>
+                <ul>
+                    <li>Beef Pilau - 350 Ksh</li>
+                    <li>Mutton Pilau - 400 Ksh</li>
+                    <li>Chicken Pilau - 430 Ksh</li>
+                    <li>Nyama Choma</li>
+                    <ul>
+                        <li>Beef (1 kg) - 950 Ksh</li>
+                        <li>Pork (1 kg) - 800 Ksh</li>
+                        <li>Mbuzi (1 kg) - 1100 Ksh</li>
+                    </ul>
+                </ul>
+                <li>Side Dishes</li>
                 <ul>
                     <li>Ugali - 150 Ksh</li>
                     <li>Mukimo - 180 Ksh</li>
@@ -29,52 +35,32 @@
                 </ul>
             </ul>
         </div>
-        <form id="order-form">
-            <h2>Collect Orders</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="072200000" pattern="[0-9]{10}" required>
-            
-            <label for="meal1">Select Meal 1:</label>
-            <select id="meal1" name="meal1">
-                <option value="Beef Pilau">Beef Pilau</option>
-                <option value="Mutton Pilau">Mutton Pilau</option>
-                <option value="Chicken Pilau">Chicken Pilau</option>
-                <!-- Add more meal options here -->
-            </select>
-            
-            <label for="meal2">Select Meal 2:</label>
-            <select id="meal2" name="meal2">
-                <option value="">None</option>
-                <option value="Beef Pilau">Beef Pilau</option>
-                <option value="Mutton Pilau">Mutton Pilau</option>
-                <option value="Chicken Pilau">Chicken Pilau</option>
-                <!-- Add more meal options here -->
-            </select>
-            
-            <label for="meal3">Select Meal 3:</label>
-            <select id="meal3" name="meal3">
-                <option value="">None</option>
-                <option value="Beef Pilau">Beef Pilau</option>
-                <option value="Mutton Pilau">Mutton Pilau</option>
-                <option value="Chicken Pilau">Chicken Pilau</option>
-                <!-- Add more meal options here -->
-            </select>
-            
-            <label for="serving">Serving for:</label>
-            <input type="number" id="serving" name="serving" min="1" value="1" required>
-            
-            <label for="location">Delivery Location:</label>
-            <input type="text" id="location" name="location" placeholder="Thika Road Estate" required>
-            
-            <button type="submit">Place Order</button>
-        </form>
-    </main>
+    </div>
+    <form id="order-form">
+        <h2>Collect Orders</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="072200000" pattern="[0-9]{9}" required>
+        <label for="meal">Choose a Meal:</label>
+        <select id="meal" name="meal" required>
+            <option value="Beef Pilau">Beef Pilau</option>
+            <option value="Mutton Pilau">Mutton Pilau</option>
+            <option value="Chicken Pilau">Chicken Pilau</option>
+            <option value="Nyama Choma">Nyama Choma</option>
+            <option value="Ugali">Ugali</option>
+            <option value="Mukimo">Mukimo</option>
+            <option value="Chips">Chips</option>
+            <option value="Kachumbari">Kachumbari</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <label for="location">Delivery Location:</label>
+        <input type="text" id="location" name="location" placeholder="Thika Road Estate" required>
+        <button type="submit">Submit Order</button>
+    </form>
     <footer>
-        <p>Payment is done on delivery through Mpesa.</p>
-        <p>Thank you for choosing to share a meal with us!</p>
+        <p id="footnote">Payment is done on delivery through Mpesa. Thank you for choosing to share a meal with us!</p>
     </footer>
     <script src="script.js"></script>
 </body>
